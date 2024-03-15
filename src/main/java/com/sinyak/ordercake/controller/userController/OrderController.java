@@ -30,7 +30,7 @@ public class OrderController {
     public String mainPage(Model model){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         MyUserDetails myUserDetails= (MyUserDetails)authentication.getPrincipal();
-        List<Reviews> reviews = revService.findAll().stream().limit(5).toList();
+        List<Reviews> reviews = revService.findAll();
         model.addAttribute("nameUser",myUserDetails);
         model.addAttribute("listReview",reviews);
         return "user/index";

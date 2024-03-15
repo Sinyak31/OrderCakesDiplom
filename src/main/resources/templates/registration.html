@@ -22,15 +22,33 @@
     </div>
     <a class="vk" href="https://vk.com/sladosti_dlya_radosti73" target="_blank"><img th:src="@{/images/вк.png}" width=100px height=90px/></a>
 </div>
+
 <h1>Регистрация:</h1>
+
 <form th:action="@{/new-user}" method="post">
 <div>
-    <input type="text" name="name" placeholder="Введите имя"/>
-</div>
-<div>
-    <input type="password" name="password" placeholder="Введите Пароль"/>
-</div>
-<input type="submit" value="Зарегистрироваться">
+    <input type="text" name="name" placeholder="Ваше имя"/>
+</div><br>
+
+    <div>
+        <input type="text" name="surname" placeholder="Ваша фамилию"/>
+    </div><br>
+    <div>
+        <input type="text" name="email" placeholder="Ваш email"/>
+    </div><br>
+    <div>
+        <input type="text" name="phone_number" placeholder="Ваш номер телефона"/>
+    </div><br>
+    <div>
+        <input type="password" id="password" name="password" placeholder="Введите Пароль"/>
+    </div><br>
+    <div>
+        <input type="password" id="password2" name="password" placeholder="Введите пароль еще раз" onchange="passwordСomprasion()"/>
+    </div><br>
+<input type="submit" id="reg" value="Зарегистрироваться" disabled >
 </form>
+
+    <script src="/js/registration.js">
+</script>
 </body>
 </html>

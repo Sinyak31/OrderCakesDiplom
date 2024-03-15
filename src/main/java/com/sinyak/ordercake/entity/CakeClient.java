@@ -29,6 +29,6 @@ public class CakeClient {
     private String decoration;
     @Lob
     private String image;
-    
+
 }
 
