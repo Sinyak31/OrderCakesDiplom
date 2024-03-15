@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <title>Изменение торта</title>
+    <link href="/style/styleav.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="image/лого.png" type="image/x-icon">
+</head>
+<body>
+<div class="main">
+    <a class="logo" href="/admin"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
+    <a class="title" id="title" href="/admin">Сладости для радости</a>
+    <div class="vibor">
+        <a class="title" id="subtitle" href="/admin-choice">Выбрать торт</a>
+    </div>
+    <div class="menu">
+        <a class="text" id="subtitle" href="/builder">Создать торт</a>
+    </div>
+    <a class="vk" href="https://vk.com/sladosti_dlya_radosti73" target="_blank"><img th:src="@{/images/вк.png}"
+                                                                                     width=100px height=90px/></a>
+    <div class="vhod">
+        <a class="text" id="subtitle" href="adm.html">ВЫХОД</a>
+    </div>
+</div>
+<div class="card" th:object="${cake}">
+
+                <form th:action="@{'/admin/updateCake/'+${cake.id}}" method="post" enctype="multipart/form-data">
+                    <label for="name"> Название торта </label>
+                    <input type="text" th:field="*{nameCake}" id="name"><br>
+                    <label for="descriptionCake"> Описание торта </label>
+                    <textarea rows="5" cols="45" th:field="*{descriptionCake}" name="descriptionCake" placeholder="Описание торта:" id="descriptionCake"></textarea>
+                    <br>
+                    <input type="file" id="file-input" name="file" accept="image/png" multiple>
+                    <br><br>
+                    <input type="submit" value="Применить изменения">
+                </form>
+                <a href="#" class="close">Закрыть окно</a>
+</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<! DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:security="www.springframework.org/security/tags">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <title>Заказ тортов</title>
+    <link href="/style/stylea.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/лого.png" type="image/x-icon">
+</head>
+<body>
+<div class="main">
+    <a class="logo" href="/index"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
+    <a class="title" id="title" href="/index">Сладости для радости</a>
+    <div class="vibor">
+        <a class="title"  id="subtitle"  href="/choice">Выбрать торт</a>
+    </div>
+    <div class="menu">
+        <a class="text"  id="subtitle" href="/builder">Создать торт</a>
+    </div>
+    <a class="vk" href="https://vk.com/sladosti_dlya_radosti73" target="_blank"><img th:src="@{/images/вк.png}" width=100px height=90px/></a>
+</div>
+<h1>Регистрация:</h1>
+<form th:action="@{/new-user}" method="post">
+<div>
+    <input type="text" name="name" placeholder="Введите имя"/>
+</div>
+<div>
+    <input type="password" name="password" placeholder="Введите Пароль"/>
+</div>
+<input type="submit" value="Зарегистрироваться">
+</form>
+</body>
+</html>

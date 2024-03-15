@@ -1,0 +1,190 @@
+body {
+    font-family: 'Pacifico', cursive;
+    background: #FFECF0 url(../images/шапка.jpg) repeat-x;
+}
+
+.logo {
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+#title	{
+    position: absolute;
+    width: 550px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 0px;
+    font-size: 50px;
+}
+
+.vibor{
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    margin-left: 950px;
+    margin-top: -75px;
+    font-size: 22px;
+}
+
+a.title {
+    text-decoration: none;
+    color: black;
+}
+
+.menu	{
+    position: absolute;
+    font-size: 22px;
+    margin-left: 1150px;
+    margin-top: -75px;
+}
+
+.vhod	{
+    position: absolute;
+    font-size: 17px;
+    margin-left: 1375px;
+    margin-top: -7px;
+}
+
+a.text {
+    text-decoration: none;
+    color: black;
+}
+
+.vk {
+    margin-left: 1220px;
+    margin-top: -65px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.bottom-card {
+    font-size:20px;
+    text-align:justify;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    text-align:center;
+}
+
+.specialize {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    border-style:dotted;
+    border-color: #000000;
+    border-radius:15px;
+    width: 400px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.top-card {
+    text-align:center;
+}
+
+button {
+    font-family: 'Pacifico', cursive;
+    background-color: #FFECF0;
+    font-size: 20px;
+    margin-left:90px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover {background: #f5ced2;}
+
+#zatemnenie{
+    background: rgba(102, 102, 102, 0.5);
+    width: 300%;
+    height: 300%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#okno {
+    width: 500px;
+    height: 1100px;
+    text-align: center;
+    padding: 15px;
+    border: dotted #000000;
+    border-radius: 10px;
+    color: #000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 170px 0px 0px 500px;
+    background: #FFECF0;
+}
+
+#zatemnenie:target {display: block;}
+
+.close {
+    display: inline-block;
+    border: 2px solid #000000;
+    border-radius:10px;
+    color: #000000;
+    padding: 0 15px;
+    margin: 10px;
+    text-decoration: none;
+    background: #FFECF0;
+    font-size: 20px;
+    cursor:pointer;
+
+
+}
+
+.close:hover {background: #f5ced2;}
+
+button[type=submit] {
+    font-family: 'Pacifico', cursive;
+    background-color: #FFECF0;
+    font-size: 20px;
+    margin-left:20px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button[type=submit]:hover {background: #f5ced2;}
+
+#photo {
+    margin-top:50px;
+    margin-right:200px;
+}
+
+form {
+    margin-top: -0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+input[type=text] {
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+h4 {
+    margin-top: -310px;
+}
+
+
+

@@ -1,0 +1,79 @@
+body {
+    font-family: 'Pacifico', cursive;
+    background: #FFECF0 url(../images/шапка.jpg) repeat-x;
+}
+    
+.logo {
+    margin-left: 20px;	
+    margin-top: 0px;
+}
+    
+#title	{
+    position: absolute;
+    width: 550px; 
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 0px;
+    font-size: 50px;
+}
+
+.vibor{
+    position: absolute;
+    width: 300px; 
+    height: 50px;
+    margin-left: 950px;
+    margin-top: -75px;
+    font-size: 22px;
+}
+
+a.title {
+    text-decoration: none;
+    color: black;
+}
+    
+.menu	{
+    position: absolute;
+    font-size: 22px;
+    margin-left: 1150px;
+    margin-top: -75px;
+}
+    
+a.text {
+    text-decoration: none;
+    color: black;
+}
+    
+.vk {
+    margin-left: 1220px;	
+    margin-top: -65px;	
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+input[type=password], input[name=login] , input[name=name],input[name=userName], input[name=username] {
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
+}
+    
+input[type=password] {
+    margin-top: 20px;
+}
+
+input[type=submit] {
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #FFECF0;
+    font-family: 'Pacifico', cursive;
+    margin-top: 20px;
+}
+
+input[type=submit]:hover {background: #f5ced2;}

@@ -1,0 +1,128 @@
+body {
+    font-family: 'Pacifico', cursive;
+    background: #FFECF0 url(../images/шапка.jpg) repeat-x;
+}
+    
+.logo {
+    margin-left: 20px;	
+    margin-top: 0px;
+}
+    
+#title	{
+    position: absolute;
+    width: 550px; 
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 0px;
+    font-size: 50px;
+}
+    
+.vibor{
+    position: absolute;
+    width: 300px; 
+    height: 50px;
+    margin-left: 950px;
+    margin-top: -75px;
+    font-size: 22px;
+}
+    
+a.title {
+    text-decoration: none;
+    color: black;
+}
+    
+.menu	{
+    position: absolute;
+    font-size: 22px;
+    margin-left: 1150px;
+    margin-top: -75px;
+}
+    
+.vhod	{
+    position: absolute;
+    font-size: 17px;
+    margin-left: 1375px;
+    margin-top: -7px;
+}
+    
+a.text {
+    text-decoration: none;
+    color: black;
+}
+    
+.vk {
+    margin-left: 1220px;	
+    margin-top: -65px;	
+}
+    
+h1 {
+    text-align: center;
+}
+    
+fieldset{
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+    
+label[for=name] {
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+    
+input [type=text] {
+    margin-top: 20px;
+}
+    
+.file-button {
+    display: block;
+    margin-left: 40px;
+    width: 170px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+    border: 3px dotted black;
+}
+    
+.file-button:hover {background: #f5ced2;}
+    
+input[type="file"]{
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+}
+    
+input[type="file"]:focus label {
+    border-color: black;  
+}
+    
+p {
+    font-size: 20px;
+    margin-left: 40px;
+}
+    
+input[type=submit], input[type=reset], textarea {
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #FFECF0;
+    font-family: 'Pacifico', cursive;
+}
+    
+textarea {
+    margin-left: 40px;
+}
+
+input[type=submit] {
+    margin-left: 40px;
+}
+    
+input[type=submit]:hover {background: #f5ced2;}
+input[type=reset]:hover {background: #f5ced2;}

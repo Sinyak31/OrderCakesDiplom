@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <title>Заказ тортов</title>
+    <link href="/style/stylev.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="image/лого.png" type="image/x-icon">
+</head>
+<body>
+<div class="main">
+    <a class="logo" href="/index"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
+    <a class="title" id="title" href="/index">Сладости для радости</a>
+    <div class="vibor">
+        <a class="title" id="subtitle" href="/choice">Выбрать торт</a>
+    </div>
+    <div class="menu">
+        <a class="text" id="subtitle" href="/builder">Создать торт</a>
+    </div>
+    <a class="vk" href="https://vk.com/sladosti_dlya_radosti73" target="_blank"><img th:src="@{/images/вк.png}"
+                                                                                     width=100px height=90px/></a>
+    <div class="vhod">
+        <a class="text" id="subtitle" href="/logout">ВЫХОД</a>
+    </div>
+</div>
+<h2>Наши тортики:</h2>
+<div class="specialize">
+
+
+
+
+
+    <th:block th:each="cakes: ${listCake}">
+        <div class="card" th:object="${cakes}">
+            <div class="top-card">
+                <img th:src="@{'data:image/png;base64,'+ *{image}}" alt="Изображения нет"/>
+
+            </div>
+
+            <div class="bottom-card">
+                <h3 th:text="${cakes.getNameCake()}"></h3>
+                <h3 th:text="${cakes.getDescriptionCake()}"></h3>
+                <h3 th:text="${'Цена за 1 кг: '+cakes.getCostOneKg()}"></h3>
+                    <a th:href="@{/order_details/{id}(id=${cakes.getId()})}">
+                        <button>Заказать</button>
+                    </a>
+                </p>
+<!--                <div id="zatemnenie">-->
+<!--                    <div id="okno">-->
+<!--                        <form action="http://vk.com" method="post">-->
+<!--                            <p th:text="${'Торт  :  '+cakes.getNameCake()}">Торт: малиновый</p>-->
+<!--                            <p th:text="${'Описаниеcakes  :  '+cakes.getDescriptionCake()}">Описание: кайфовый</p>-->
+<!--                            <p>Оформление: самое лучшее</p>-->
+<!--                            <p>Вес: тяжелый</p>-->
+<!--                            <p>Стоимость: имеется</p>-->
+<!--                            <img th:src="@{/{text}(text=${cakes.getUrlImgCake()})}"/><br>-->
+<!--                            <input type="text" id="fam" name="fam" placeholder="Фамилия:"><br>-->
+<!--                            <input type="text" id="name" name="name" placeholder="Имя:"><br>-->
+<!--                            <input type="text" id="otch" name="otch" placeholder="e-mail"><br>-->
+<!--                            <input type="text" id="phone" name="phone" placeholder="Контактный телефон:"><br>-->
+<!--                            <input type="checkbox" id="dost" onclick="enable()"> <label for="dost"> доставка </label><br>-->
+<!--                            <input type="text" id="street" name="street" placeholder="Улица:" disabled><br>-->
+<!--                            <input type="text" id="house" name="house" placeholder="Дом:" disabled><br>-->
+<!--                            <input type="text" id="flat" name="flat" placeholder="Квартира:" disabled><br>-->
+<!--                            <button type="submit">Отправить заявку</button>-->
+<!--                            <a href="#" class="close">Закрыть окно </a>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </th:block>
+</div>
+
+<script>
+    function disable() {
+        // document.getElementById("street").disabled = false;
+        // document.getElementById("house").disabled = true;
+        // document.getElementById("flat").disabled = false;
+    }
+    function enable() {
+        document.getElementById("street").disabled = false;
+        document.getElementById("house").disabled = false;
+        document.getElementById("flat").disabled = false;
+    }
+</script>
+</body>
+</html>

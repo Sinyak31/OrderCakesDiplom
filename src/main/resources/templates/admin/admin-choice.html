@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <title>Заказ тортов</title>
+    <link href="/style/styleav.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="image/лого.png" type="image/x-icon">
+</head>
+<body>
+<div class="main">
+    <a class="logo" href="/admin/index"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
+    <a class="title" id="title" href="/admin/index">Сладости для радости</a>
+    <div class="vibor">
+        <a class="title" id="subtitle" href="/admin/choice">Выбрать торт</a>
+    </div>
+    <div class="menu">
+        <a class="text" id="subtitle" href="/builder">Создать торт</a>
+    </div>
+    <a class="vk" href="https://vk.com/sladosti_dlya_radosti73" target="_blank"><img th:src="@{/images/вк.png}"
+                                                                                     width=100px height=90px/></a>
+    <div class="vhod">
+        <a class="text" id="subtitle" href="/logout">ВЫХОД</a>
+    </div>
+</div>
+<h2>Наши тортики:</h2>
+<div class="specialize">
+
+    <th:block th:each="cakes: ${listCake}">
+        <div class="card" th:object="${cakes}">
+            <div class="top-card">
+                <img th:src="@{'data:image/png;base64,'+ *{image}}" alt="Изображения нет"/>
+
+            </div>
+
+            <div class="bottom-card">
+                <h3 th:text="${cakes.getNameCake()}"></h3>
+                <h3 th:text="${cakes.getDescriptionCake()}"></h3>
+                <h3 th:text="${'Цена за 1 кг: '+cakes.getCostOneKg()}"></h3>
+                    <button onclick="window.location.href='#zatemnenie'">Заказать</button>
+                </p>
+                <a th:href="@{/admin/deleteCake/{id}(id=${cakes.getId()})}"><button>Удалить</button>
+                </a>
+                <a th:href="@{/admin/updateCake/{id}(id=${cakes.getId()})}"><button>Изменить</button>
+                </a>
+
+
+                <div id="zatemnenie">
+                    <div id="okno">
+                        <form action="/choice" method="post">
+                            <input type="text" id="fam" name="fam" placeholder="Фамилия:"><br>
+                            <input type="text" id="name" name="name" placeholder="Имя:"><br>
+                            <input type="text" id="otch" name="otch" placeholder="Отчество:"><br>
+                            <input type="text" id="phone" name="phone" placeholder="Контактный телефон:"><br>
+                            <button type="submit">Отправить заявку</button>
+                            <a href="#" class="close">Закрыть окно</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </th:block>
+</div>
+
+<a class="plu" href='#zatemneniep'>
+    <div class="cardp">
+        <img th:src="@{/images/pl.png}"/>
+        <div id="zatemneniep">
+
+            <div id="oknop">
+
+                <form action="/admin/add-cake" method="post" enctype="multipart/form-data">
+                    <input type="text" id="name" name="nameCake" placeholder="Название торта:"><br>
+                    <textarea rows="5" cols="30" name="descriptionCake" placeholder="Описание торта:"></textarea>
+                    <input type="number" id="cost" name="costOneKg" placeholder="Стоимость 1 кг"><br>
+                    <input type="file" id="file-input" name="file" accept="image/png" multiple>
+                    <br><br>
+
+                    <input type="submit" value="Добавить торт">
+                </form>
+                <a href="#" class="close">Закрыть окно</a>
+            </div>
+
+        </div>
+    </div>
+ </body>
+</html>

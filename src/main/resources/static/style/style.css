@@ -1,0 +1,251 @@
+body {
+    font-family: 'Pacifico', cursive;
+    background: #FFECF0 url(../images/шапка.jpg) repeat-x;
+}
+
+.logo {
+	margin-left: 20px;	
+  	margin-top: 0px;
+}
+
+#title	{
+  position: absolute;
+  width: 550px; 
+  height: 100px;
+  margin-left: 30px;
+  margin-top: 0px;
+  font-size: 50px;
+}
+
+.vibor{
+  position: absolute;
+  width: 300px; 
+  height: 50px;
+  margin-left: 950px;
+  margin-top: -75px;
+  font-size: 22px;
+}
+a.title {
+  text-decoration: none;
+  color: black;
+}
+
+.menu	{
+  position: absolute;
+  font-size: 22px;
+  margin-left: 1150px;
+  margin-top: -75px;
+}
+
+.vhod	{
+    position: absolute;
+    font-size: 17px;
+    margin-left: 1375px;
+    margin-top: -7px;
+}
+
+a.text {
+  text-decoration: none;
+  color: black;
+}
+
+.vk {
+	margin-left: 1220px;	
+  	margin-top: -65px;	
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 200px;
+    margin-top: -20px;
+}
+
+h2 {
+    margin-top: -145px;
+    margin-left: 200px;
+    font-size: 20px;
+}
+
+h3 {
+    margin-top: -170px;
+    margin-left: 200px;
+    font-size: 20px;
+}
+
+.mi {
+    display: flex;
+    justify-content: space-around;
+    margin-left: -50px;
+    margin-top: 30px;
+}
+
+.card {
+    width: 450px;
+}
+
+.top-card {
+    text-align:left;
+}
+
+.bottom-card {
+    text-align:justify;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+a.predl	{
+  font-size: 25px;
+  margin-left:60px;
+  text-decoration: none;
+  color: black;
+}
+
+h4 {
+    text-align:center;
+    margin-top: 0px;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.zak{
+  position: absolute;
+  width: 416px; 
+  height: 200px;
+  margin-top: -8px;
+  margin-left: 160px;
+  font-size: 25px;
+  text-align:center;
+}
+
+.opl{
+  position: absolute;
+  width: 416px; 
+  height: 170px;
+  margin-top: -8px;
+  margin-left: 580px;
+  font-size: 25px;
+  text-align:center;
+  border-left:3px #000000  solid;
+  border-right:3px #000000  solid;
+}
+
+.zabr{
+  position: absolute;
+  width: 416px; 
+  height: 200px;
+  margin-top: -8px;
+  margin-left: 1000px;
+  font-size: 25px;
+  text-align:center;
+}
+
+.zak p {
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -40px;
+    text-align: justify;
+    font-size:20px;
+}
+
+.opl p {
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -40px;
+    text-align: justify;
+    font-size:20px;
+}
+
+.zabr p {
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -40px;
+    text-align: left;
+    font-size:20px;
+}
+
+.line1 {
+    margin-top:240px;
+}
+
+.map {
+    padding-left: 460px;
+}
+
+form {
+    margin-left:20px;
+}
+
+input[type=text], textarea{
+    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+    
+textarea {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 13px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #FFECF0;
+    font-family: 'Pacifico', cursive;
+    margin-top: 20px;
+}
+
+button:hover {background: #f5ced2;}
+
+table {
+    width: 900px;
+    margin-left: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    border-spacing: 0px 10px;
+}
+
+td {
+    font-size:22px;
+    padding:10px;
+}
+
+tr.active td {
+    border-bottom: solid black;
+    border-top: solid black;
+}
+
+tr.active td:first-child {
+    border-left: solid black;
+    border-radius: 10px 0px 0px 10px;
+}
+
+tr.active td:last-child {
+    border-right: solid black;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.silki {
+    justify-content: center;
+    align-items: center;
+}
+
+.social {
+    color: #000000;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social__item {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #000000;
+}

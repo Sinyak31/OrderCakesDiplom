@@ -1,0 +1,156 @@
+<! DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport">
+	<title>Заказ тортов</title>
+	<link href="/style/styleai.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link rel="icon" href="images/лого.png" type="image/x-icon">
+</head>
+<body>
+<script>
+	(function (w, d, u) {
+		var s = d.createElement('script');
+		s.async = true;
+		s.src = u + '?' + (Date.now() / 60000 | 0);
+		var h = d.getElementsByTagName('script')[0];
+		h.parentNode.insertBefore(s, h);
+	})(window, document, 'https://cdn-ru.bitrix24.ru/b28652392/crm/site_button/loader_2_kquw16.js');
+</script>
+<div class="main">
+	<a class="logo" href="/admin/index"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
+	<a class="title" id="title" href="/admin/index">Сладости для радости</a>
+	<div class="vibor">
+		<a class="title" id="subtitle" href="/admin/choice">Выбрать торт</a>
+	</div>
+	<div class="menu">
+		<a class="text" id="subtitle" href="/builder">Создать торт</a>
+	</div>
+	<a class="vk" href="https://vk.com/sladosti_dlya_radosti73" target="_blank"><img th:src="@{/images/вк.png}"
+																					 width=100px height=90px/></a>
+	<div class="vhod">
+		<a class="text" id="subtitle" href="/logout">ВЫХОД</a>
+	</div>
+</div>
+
+<h1> Почему мы? </h1>
+<div class="mi">
+	<div class="card">
+		<div class="top-card">
+			<img th:src="@{/images/праздник.png}" Width="280" Height="150"/>
+		</div>
+		<div class="bottom-card">
+			<h2> На любой праздник</h2>
+			<p> Свадьба, день рождение, новый год... Любой день станет незабываемым с нашими сладостями </p>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="top-card">
+			<img th:src="@{/images/формат.png}" Width="280" Height="150"/>
+		</div>
+		<div class="bottom-card">
+			<h2>В любом формате</h2>
+			<p> Вы можете предложить свой вариант торта или выбрать готовый из каталога </p>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="top-card">
+			<img th:src="@{/images/упаковка.png}" Width="280" Height="150"/>
+		</div>
+		<div class="bottom-card">
+			<h2>Красивая упаковка</h2>
+			<p>Защитит ваш десерт от внешнего воздействия и сохранит торт в отличном виде </p>
+		</div>
+	</div>
+</div>
+
+<div class="mi">
+	<div class="card">
+		<div class="top-card">
+			<img th:src="@{/images/вкусные.png}" Width="280" Height="210"/>
+		</div>
+		<div class="bottom-card">
+			<h3>Вкусные</h3>
+			<p>Наши торты сочные и вкусные, потому что мы делаем их с душой </p>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="top-card">
+			<img th:src="@{/images/натур.png}" Width="280" Height="210"/>
+		</div>
+		<div class="bottom-card">
+			<h3>Натуральные</h3>
+			<p>Мы не используем искусственные жиры, добавки, готовые смеси и усилители вкуса</p>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="top-card">
+			<img th:src="@{/images/свежие.png}" Width="280" Height="220"/>
+		</div>
+		<div class="bottom-card">
+			<h3>Свежие</h3>
+			<p>Ваш заказ готовится в назначенный день, свежесть и неизменность торта гарантированы </p>
+		</div>
+	</div>
+</div>
+
+<h1> Мы предлагаем: </h1>
+<a class="predl" id="predl" href="/choice">*Выбрать один из вариантов торта</a>
+<br>
+<a class="predl" id="predl" href="/builder">*Создать торт по своим предпочтениям</a>
+
+<h1> Условия заказа </h1>
+<div class="zak">
+	<h4>Как заказать?</h4>
+	<p>Оставьте заявку на сайте. Для брони заказа надо внести 50% предоплату</p>
+</div>
+
+<div class="opl">
+	<h4>Как оплатить?</h4>
+	<p>Вы можете приехать к нам, чтобы оплатить предоплату или оплатить ее онлайн</p>
+</div>
+
+<div class="zabr">
+	<h4>Как забрать?</h4>
+	<p>Доплата и самовывоз осуществляется в назначенный день</p>
+</div>
+<hr class="line1" color="black" , size="3px">
+<h1> Наше местоположение: </h1>
+<div class="map">
+	<script type="text/javascript" charset="utf-8" async
+			src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad5602159a77df032dd176a22f0516b3f48aa6707d036ad0d0aeb5abd0fe26f8f&amp;width=516&amp;height=412&amp;lang=ru_RU&amp;scroll=true"></script>
+</div>
+<hr class="line2" color="black" , size="3px">
+
+
+<form action="/saveReviews" method="post">
+	<input type="text" id="name" name="nameClient" placeholder="Имя:"><br>
+	<textarea rows="5" cols="45" name="reviewsText" placeholder="Оставьте отзыв:"></textarea>
+	<button type="submit">Отправить отзыв</button>
+</form>
+
+
+<h1>Отзывы</h1>
+<table>
+
+		<tr th:each="lis: ${listReview}" class="active">
+			<td th:text="${lis.getNameClient()}" >Имя</td>
+			<td th:text="${lis.getReviewsText()}">Отзыв </td>
+			<td><a th:href="@{/admin/deleteReviews/{id}(id=${lis.getId()})}">Удалить</a></td>
+		</tr>
+
+
+</table>
+</body>
+</html>
+
+
+
+

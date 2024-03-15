@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <title>Заказ тортов</title>
+    <link href="/style/stylev.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="image/лого.png" type="image/x-icon">
+</head>
+ <body>
+ <div class="main">
+     <a class="logo" href="/index"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
+     <a class="title" id="title" href="/index">Сладости для радости</a>
+     <div class="vibor">
+         <a class="title" id="subtitle" href="/choice">Выбрать торт</a>
+     </div>
+     <div class="menu">
+         <a class="text" id="subtitle" href="/builder">Создать торт</a>
+     </div>
+     <a class="vk" href="https://vk.com/sladosti_dlya_radosti73" target="_blank"><img th:src="@{/images/вк.png}"
+                                                                                      width=100px height=90px/></a>
+     <div class="vhod">
+         <a class="text" id="subtitle" href="/logout">ВЫХОД</a>
+     </div>
+ </div>
+
+
+    <div id="okno" th:object="${cake}">
+            <form action="/addOrder" method="post">
+                <input type="hidden" th:field="*{id}" id="id">
+            <p th:text="${cake.getNameCake()}">Торт:</p>
+            <p th:text="${'Описание:'+cake.getDescriptionCake()}">Описание:</p>
+            <p>Оформление: самое лучшее</p>
+                <input type="hidden" th:field="*{costOneKg}" id="cost" >
+                <input type="text" id="weightCake" name="cakeClient.weight" placeholder="Вес:" ><br>
+                <img th:src="@{'data:image/png;base64,'+ *{image}}" alt="Изображения нет"/><br>
+                <input type="text" name="order.cost" placeholder="Стоимость" readonly><br>
+
+
+            <input type="text" id="surName" name="client.surName" placeholder="Фамилия:"><br>
+            <input type="text" id="name" name="client.name" placeholder="Имя:"><br>
+            <input type="text" id="email" name="client.email" placeholder="e-mail"><br>
+            <input type="text" id="phone_number" name="client.phone_number" placeholder="Контактный телефон:"><br>
+
+            <input type="checkbox" id="dost" > <label for="dost"> доставка </label><br>
+            <input type="text" id="street" name="delivery.street" placeholder="Улица:" disabled><br>
+            <input type="text" id="house" name="delivery.house" placeholder="Дом:" disabled><br>
+            <input type="text" id="flat" name="delivery.flat" placeholder="Квартира:" disabled><br>
+                <label for="date">Дата доставки:</label>
+                <input type="date" id="date" name="delivery.delivery_date" value="2018-07-22" min="2018-01-01" max="2024-12-31" />
+
+
+                <br>
+                <br>
+                <input type="text" name="order.comment" placeholder="Комментарий"><br>
+
+            <button type="submit">Отправить заявку</button>
+            <a href="/choice" class="close">Отмена </a>
+        </form>
+    </div>
+<!-- <script>-->
+<!--     function disable() {-->
+<!--         // document.getElementById("street").disabled = false;-->
+<!--         // document.getElementById("house").disabled = true;-->
+<!--         // document.getElementById("flat").disabled = false;-->
+<!--     }-->
+<!--     function enable() {-->
+<!--         document.getElementById("street").disabled = false;-->
+<!--         document.getElementById("house").disabled = false;-->
+<!--         document.getElementById("flat").disabled = false;-->
+<!--     }-->
+<!-- </script>-->
+
+<!-- <script>-->
+<!--     function calculatePrice() {-->
+<!--         var costOneKG = document.getElementById("cost").value;-->
+<!--         var weight = document.getElementById("weightCake").value;-->
+<!--         var price = weight * costOneKG; // Предположим, что цена 1000 руб за кг-->
+
+<!--         var dost = document.getElementById("dost");-->
+<!--         if (dost.checked) {-->
+<!--             price += 500; // Добавляем 500 рублей за доставку-->
+<!--         }-->
+<!--         document.querySelector('input[name="order.cost"]').value = price;-->
+
+<!--     }-->
+<!-- </script>-->
+ <script src="/js/orderDetails.js"></script>
+ </body>
+</html>
+
