@@ -11,15 +11,7 @@
 	<link rel="icon" href="images/лого.png" type="image/x-icon">
 </head>
 <body>
-<script>
-	(function (w, d, u) {
-		var s = d.createElement('script');
-		s.async = true;
-		s.src = u + '?' + (Date.now() / 60000 | 0);
-		var h = d.getElementsByTagName('script')[0];
-		h.parentNode.insertBefore(s, h);
-	})(window, document, 'https://cdn-ru.bitrix24.ru/b28652392/crm/site_button/loader_2_kquw16.js');
-</script>
+
 <div class="main">
 	<a class="logo" href="/admin/index"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
 	<a class="title" id="title" href="/admin/index">Сладости для радости</a>
@@ -27,7 +19,7 @@
 		<a class="title" id="subtitle" href="/admin/choice">Выбрать торт</a>
 	</div>
 	<div class="menu">
-		<a class="text" id="subtitle" href="/builder">Создать торт</a>
+		<a class="text" id="subtitle" href="/admin/panel">Админ панель</a>
 	</div>
 	<a class="vk" href="https://vk.com/sladosti_dlya_radosti73" target="_blank"><img th:src="@{/images/вк.png}"
 																					 width=100px height=90px/></a>
@@ -148,6 +140,15 @@
 
 
 </table>
+<script>
+	(function (w, d, u) {
+		var s = d.createElement('script');
+		s.async = true;
+		s.src = u + '?' + (Date.now() / 60000 | 0);
+		var h = d.getElementsByTagName('script')[0];
+		h.parentNode.insertBefore(s, h);
+	})(window, document, 'https://cdn-ru.bitrix24.ru/b28652392/crm/site_button/loader_2_kquw16.js');
+</script>
 </body>
 </html>
 

@@ -1,16 +1,14 @@
 package com.sinyak.ordercake.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Entity
 @Table(name = "cake")
 @Setter
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class Cake {
     @Id
@@ -25,5 +23,7 @@ public class Cake {
     private int costOneKg;
     @Lob
     private String image;
-
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "categories_id", referencedColumnName = "id")
+    private Categories categories;
 }

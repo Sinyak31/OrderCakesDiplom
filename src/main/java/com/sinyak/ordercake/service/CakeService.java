@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Service
 public class CakeService {
-    @Autowired
+
     private final CakeRepository cakeRepository;
 
     public CakeService(CakeRepository cakeRepository) {

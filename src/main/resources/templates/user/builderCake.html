@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport">
+    <meta charset="utf-8">
+    <meta name="viewport">
     <title>Заказ тортов</title>
     <link href="style/stylek.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,135 +10,136 @@
     <link rel="icon" href="/static" type="image/x-icon">
 </head>
 <body>
-    <div class="main">
-	    <a class="logo" href="/index"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
-	    <a class="title" id="title" href="/index">Сладости для радости</a>
-	    <div class="vibor">
-             <a class="title"  id="subtitle"  href="/choice">Выбрать торт</a>
-	    </div>
-	    <div class="menu">
-            <a class="text"  id="subtitle" href="/builder">Создать торт</a>
-	    </div>
-	    <a class="vk" href="https://vk.com/sladosti_dlya_radosti73" target="_blank"><img th:src="@{/images/вк.png}" width=100px height=90px/></a>
-        <div class="vhod">
-            <a class="text"  id="subtitle" href="/logout">ВЫХОД</a>
-        </div>
+<div class="main">
+    <a class="logo" href="/index"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
+    <a class="title" id="title" href="/index">Сладости для радости</a>
+    <div class="vibor">
+        <a class="title"  id="subtitle"  href="/choice">Выбрать торт</a>
     </div>
-<h1> Создайте свой торт </h1>
-<form action="Будет метод создания заказа" method="post">
-    <label >Ваше Имя:</label>
-    <input type="text" id="fio" name="name"><br>
-    <label >Ваша Фамилия:</label>
-    <input type="text" id="fio" name="surname"><br>
+    <div class="menu">
+        <a class="text"  id="subtitle" href="/builder">Создать торт</a>
+    </div>
+    <a class="vk" href="https://vk.com/sladosti_dlya_radosti73" target="_blank"><img th:src="@{/images/вк.png}" width=100px height=90px/></a>
+    <div class="vhod">
+        <a class="text"  id="subtitle" href="/logout">ВЫХОД</a>
+    </div>
+</div>
+<!--<h1> Создайте свой торт </h1>-->
+<!--<form action="Будет метод создания заказа" method="post">-->
+<!--    <label >Ваше Имя:</label>-->
+<!--    <input type="text" id="fio" name="name"><br>-->
+<!--    <label >Ваша Фамилия:</label>-->
+<!--    <input type="text" id="fio" name="surname"><br>-->
 
-    <label >Контактный телефон:</label>
-    <input type="text" id="number" name="phoneNumber"><br>
+<!--    <label >Контактный телефон:</label>-->
+<!--    <input type="text" id="number" name="phoneNumber"><br>-->
 
-    <label >Ваш e-mail:</label>
-    <input type="text" id="fio" name="e-mail"><br>
+<!--    <label >Ваш e-mail:</label>-->
+<!--    <input type="text" id="fio" name="e-mail"><br>-->
 
-    <label>Желаемый вес торта(в кг):</label>
-    <input type="text" id="ves" name="ves">
+<!--    <label>Желаемый вес торта(в кг):</label>-->
+<!--    <input type="text" id="ves" name="ves">-->
 
-    <fieldset>
-        <legend>Количество ярусов:</legend>
-        <div>
-          <input type="radio" id="1" name="yar" value="1 ярус">
-          <label for="1">1</label>
-        </div>
+<!--    <fieldset>-->
+<!--        <legend>Количество ярусов:</legend>-->
+<!--        <div>-->
+<!--          <input type="radio" id="1" name="yar" value="1 ярус">-->
+<!--          <label for="1">1</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="radio" id="2" name="yar" value="2 яруса">
-            <label for="2">2</label>
-        </div>
+<!--        <div>-->
+<!--            <input type="radio" id="2" name="yar" value="2 яруса">-->
+<!--            <label for="2">2</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="radio" id="3" name="yar" value="3 яруса">
-            <label for="3">3</label>
-        </div>
-    </fieldset>
+<!--        <div>-->
+<!--            <input type="radio" id="3" name="yar" value="3 яруса">-->
+<!--            <label for="3">3</label>-->
+<!--        </div>-->
+<!--    </fieldset>-->
 
-    <fieldset>
-        <legend>Выберите начинку:</legend>
-        <div>
-          <input type="radio" id="r_b_m" name="nach" value="Красный бархат(малина)">
-          <label for="r_b_m">Торт «Красный бархат» нежные бисквитные коржи с легким послевкусием шоколада с прослойками из малинового конфи и сливочного крем-чиза.</label>
-        </div>
-    
-        <div>
-          <input type="radio" id="r_b_v" name="nach" value="Красный бархат(вишня)">
-          <label for="r_b_v">Торт «Красный бархат» нежные бисквитные коржи с легким послевкусием шоколада с прослойками из вишневого конфи и сливочного крем-чиза.</label>
-        </div>
+<!--    <fieldset>-->
+<!--        <legend>Выберите начинку:</legend>-->
+<!--        <div>-->
+<!--          <input type="radio" id="r_b_m" name="nach" value="Красный бархат(малина)">-->
+<!--          <label for="r_b_m">Торт «Красный бархат» нежные бисквитные коржи с легким послевкусием шоколада с прослойками из малинового конфи и сливочного крем-чиза.</label>-->
+<!--        </div>-->
+<!--    -->
+<!--        <div>-->
+<!--          <input type="radio" id="r_b_v" name="nach" value="Красный бархат(вишня)">-->
+<!--          <label for="r_b_v">Торт «Красный бархат» нежные бисквитные коржи с легким послевкусием шоколада с прослойками из вишневого конфи и сливочного крем-чиза.</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="radio" id="k_s_s" name="nach" value="Клубника со сливками">
-            <label for="k_s_s">Торт «Клубника со сливками» бисквитные ванильные коржи со сливочным кремом с маскорпоне и с прослойкой из клубничного конфи.</label>
-        </div>
+<!--        <div>-->
+<!--            <input type="radio" id="k_s_s" name="nach" value="Клубника со сливками">-->
+<!--            <label for="k_s_s">Торт «Клубника со сливками» бисквитные ванильные коржи со сливочным кремом с маскорпоне и с прослойкой из клубничного конфи.</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="radio" id="m_sh_m" name="nach" value="Малина шоколад">
-            <label for="m_sh_m">Торт «Малина-шоколад» Шоколадные бисквитные коржи с прослойками из малинового конфи и сливочного крем-чиза.</label>
-        </div>
+<!--        <div>-->
+<!--            <input type="radio" id="m_sh_m" name="nach" value="Малина шоколад">-->
+<!--            <label for="m_sh_m">Торт «Малина-шоколад» Шоколадные бисквитные коржи с прослойками из малинового конфи и сливочного крем-чиза.</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="radio" id="m_sh_v" name="nach" value="Вишня шоколад">
-            <label for="m_sh_v">Торт «Вишня-шоколад» Шоколадные бисквитные коржи с прослойками из вишневого конфи и сливочного крем-чиза.</label>
-        </div>
+<!--        <div>-->
+<!--            <input type="radio" id="m_sh_v" name="nach" value="Вишня шоколад">-->
+<!--            <label for="m_sh_v">Торт «Вишня-шоколад» Шоколадные бисквитные коржи с прослойками из вишневого конфи и сливочного крем-чиза.</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="radio" id="m_z" name="nach" value="Медовик(заварной)">
-            <label for="m_z">Торт «Медовик» нежные медовые коржи с прослойкой из заварного крема.</label>
-        </div>
+<!--        <div>-->
+<!--            <input type="radio" id="m_z" name="nach" value="Медовик(заварной)">-->
+<!--            <label for="m_z">Торт «Медовик» нежные медовые коржи с прослойкой из заварного крема.</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="radio" id="m_s" name="nach" value="Медовик(сметанный)">
-            <label for="m_s">Торт «Медовик» нежные медовые коржи с прослойкой из сливочно-сметанного крема.</label>
-        </div>
+<!--        <div>-->
+<!--            <input type="radio" id="m_s" name="nach" value="Медовик(сметанный)">-->
+<!--            <label for="m_s">Торт «Медовик» нежные медовые коржи с прослойкой из сливочно-сметанного крема.</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="radio" id="m_p" name="nach" value="Медовик(пломбир)">
-            <label for="m_p">Торт «Медовик» нежные медовые коржи с прослойкой из пломбирного крема.</label>
-        </div>
+<!--        <div>-->
+<!--            <input type="radio" id="m_p" name="nach" value="Медовик(пломбир)">-->
+<!--            <label for="m_p">Торт «Медовик» нежные медовые коржи с прослойкой из пломбирного крема.</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="radio" id="m_s_b" name="nach" value="Медовик(брусника)">
-            <label for="m_s_b">Торт «Медовик» нежные медовые коржи с прослойками из брусничного конфи и сливочно-сметанного крема.</label>
-        </div>
+<!--        <div>-->
+<!--            <input type="radio" id="m_s_b" name="nach" value="Медовик(брусника)">-->
+<!--            <label for="m_s_b">Торт «Медовик» нежные медовые коржи с прослойками из брусничного конфи и сливочно-сметанного крема.</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="radio" id="m_r_b" name="nach" value="Медовый-Красный бархат">
-            <label for="m_r_b">Торт «Медовый-Красный бархат»нежные медовые коржи с прослойками из малиново конфи и сливочно-медового крема.</label>
-        </div>
-    </fieldset>
+<!--        <div>-->
+<!--            <input type="radio" id="m_r_b" name="nach" value="Медовый-Красный бархат">-->
+<!--            <label for="m_r_b">Торт «Медовый-Красный бархат»нежные медовые коржи с прослойками из малиново конфи и сливочно-медового крема.</label>-->
+<!--        </div>-->
+<!--    </fieldset>-->
 
-    <fieldset>
-        <legend>Выберите оформление: </legend>
-        <div>
-          <input type="checkbox" id="f_p" name="oform" value="Фотопечать">
-          <label for="f_p">Фотопечать</label>
-        </div>
-    
-        <div>
-          <input type="checkbox" id="fruk" name="oform" value="Фрукты">
-          <label for="fruk">Фрукты</label>
-        </div>
+<!--    <fieldset>-->
+<!--        <legend>Выберите оформление: </legend>-->
+<!--        <div>-->
+<!--          <input type="checkbox" id="f_p" name="oform" value="Фотопечать">-->
+<!--          <label for="f_p">Фотопечать</label>-->
+<!--        </div>-->
+<!--    -->
+<!--        <div>-->
+<!--          <input type="checkbox" id="fruk" name="oform" value="Фрукты">-->
+<!--          <label for="fruk">Фрукты</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="checkbox" id="pryn" name="oform" value="Пряники">
-            <label for="pryn">Пряники</label>
-        </div>
+<!--        <div>-->
+<!--            <input type="checkbox" id="pryn" name="oform" value="Пряники">-->
+<!--            <label for="pryn">Пряники</label>-->
+<!--        </div>-->
 
-        <div>
-            <input type="checkbox" id="kr" name="oform" value="Крем">
-            <label for="kr">Крем</label>
-        </div>
-    </fieldset>
-<p>Если у вас есть другой вариант оформления, прикрепите его. Также прикрепите фото для фотопечати(если это необходимо):</p>
-    <input type="file" id="file-input" name="file"  multiple></input>
-    <label for="file-input" class="file-button">Выбрать файл</label> <br>
-    <textarea rows="5" cols="45" name="komment" placeholder="Комментарий:"></textarea><br>
-    <input type="submit" value="Заказать">
-    <input type="reset" value="Очистить">
-</form>
+<!--        <div>-->
+<!--            <input type="checkbox" id="kr" name="oform" value="Крем">-->
+<!--            <label for="kr">Крем</label>-->
+<!--        </div>-->
+<!--    </fieldset>-->
+<!--<p>Если у вас есть другой вариант оформления, прикрепите его. Также прикрепите фото для фотопечати(если это необходимо):</p>-->
+<!--    <input type="file" id="file-input" name="file"  multiple></input>-->
+<!--    <label for="file-input" class="file-button">Выбрать файл</label> <br>-->
+<!--    <textarea rows="5" cols="45" name="komment" placeholder="Комментарий:"></textarea><br>-->
+<!--    <input type="submit" value="Заказать">-->
+<!--    <input type="reset" value="Очистить">-->
+<!--</form>-->
+<img th:src="@{/images/in-construct.png}" Width="300" Height="300"/>
 </body>
 </html>

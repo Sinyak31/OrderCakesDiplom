@@ -5,14 +5,15 @@ import com.sinyak.ordercake.entity.*;
 import com.sinyak.ordercake.service.CakeService;
 import com.sinyak.ordercake.service.OrderService;
 import com.sinyak.ordercake.service.ReviewService;
+import com.sinyak.ordercake.service.emailService.EmailService;
 import lombok.AllArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,13 +21,16 @@ import java.util.Optional;
 @AllArgsConstructor
 public class OrderController {
 
+
     private OrderService orderService;
     private CakeService cakeService;
     private ReviewService revService;
+    private EmailService emailService;
 
 
 
     @GetMapping("/index")
+    @PreAuthorize("hasAuthority('ROLE_USER') || hasRole('ROLE_ADMIN')")
     public String mainPage(Model model){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         MyUserDetails myUserDetails= (MyUserDetails)authentication.getPrincipal();
@@ -38,44 +42,27 @@ public class OrderController {
 
     /**
      * Получение и отображдение тортов из БД table 'cake'
-     *Норм
      */
     @GetMapping("/choice")
     public String choiceCake(Model model) {
         List<Cake> cakes = cakeService.findAll();
         model.addAttribute("listCake", cakes);
-        System.out.println(cakes.get(0).getId());
         return "user/choiceCake";
     }
 
 
-    /**
-     * Норм, нужно исправить код (уменьшить)
-     */
     @PostMapping("/addOrder")
     public String addOrder(@ModelAttribute("orderForm") OrderForm orderForm, @RequestParam("id") int id){
-        Order order = orderForm.getOrder();
-        Client client = orderForm.getClient();
-        Delivery delivery = orderForm.getDelivery();
-        CakeClient cakeClient = orderForm.getCakeClient();
-        order.setDelivery(delivery);
-        order.setClient(client);
-        Optional<Cake> cake = cakeService.findCakeByID(id);
-        cakeClient.setDescriptionCake(cake.get().getDescriptionCake());
-        cakeClient.setNameCake(cake.get().getNameCake());
-        cakeClient.setImage(cake.get().getImage());
-        order.setCake(cakeClient);
-        order.setDateOfCakeOrder(LocalDate.now());
-        orderService.save(order);
+        orderService.save(orderForm,id);
+        emailService.sendMessageToAdmin(orderForm.getOrder()); //Оповещение админа о новом заказе по email
+        emailService.sendMessageToClientAfterOrdering(orderForm.getOrder()); //Оповещение клиента о заказе по email
         return "redirect:/index";
     }
 
 
     /**
      * Метод добавления отзыва в БД
-     *Норм
      * @param reviews
-     * @return
      */
     @PostMapping("/saveReviews")
     public String saveEmployee(@ModelAttribute("reviews") Reviews reviews) {
@@ -86,7 +73,6 @@ public class OrderController {
 
 
     /**
-     * НОРМ
      *Метод получения деталей заказа
      * @param id
      * @param model
@@ -106,7 +92,7 @@ public class OrderController {
 
 
     /**
-     * Переход на страниц конструктора
+     * Переход на страниу конструктора
      * @return
      */
     @GetMapping("/builder")

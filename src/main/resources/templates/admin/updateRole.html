@@ -12,8 +12,8 @@
 </head>
 <body>
 <div class="main">
-    <a class="logo" href="/admin"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
-    <a class="title" id="title" href="/admin">Сладости для радости</a>
+    <a class="logo" href="/admin/index"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
+    <a class="title" id="title" href="/admin/index">Сладости для радости</a>
     <div class="vibor">
         <a class="title" id="subtitle" href="/admin-choice">Выбрать торт</a>
     </div>
@@ -26,23 +26,24 @@
         <a class="text" id="subtitle" href="adm.html">ВЫХОД</a>
     </div>
 </div>
-<div class="card" th:object="${cake}">
 
-                <form th:action="@{'/admin/updateCake/'+${cake.id}}" method="post" enctype="multipart/form-data">
-                    <label for="name"> Название торта </label>
-                    <input type="text" th:field="*{nameCake}" id="name"><br>
-                    <label for="descriptionCake"> Описание торта </label>
-                    <textarea rows="5" cols="45" th:field="*{descriptionCake}" name="descriptionCake" placeholder="Описание торта:" id="descriptionCake"></textarea>
-                    <br>
-                    <input type="file" id="file-input" name="file" accept="image/png" multiple>
-                    <br><br>
-                    <input type="submit" value="Применить изменения">
-                </form>
-                <a href="/admin/choice" class="close">Закрыть окно</a>
+
+<div class="card" th:object="${user}">
+
+    <form th:action="@{'/admin/updateRole/'+${user.id}}" method="post" enctype="multipart/form-data">
+        <label for="role"> Роль </label>
+        <select id="role" name="roles">
+            <option name="roles">ROLE_ADMIN</option>
+            <option name="roles">ROLE_USER</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Поменять">
+    </form>
+    <a href="/admin/user-management" class="close">Закрыть окно</a>
 </div>
-            </div>
+</div>
 
-        </div>
-    </div>
+</div>
+</div>
 </body>
 </html>

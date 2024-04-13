@@ -174,12 +174,12 @@ h4 {
 }
 
 .cardp {
-    border-style:dotted;
-    border-color: #000000;
-    border-radius:15px;
-    width: 200px;
-    height: 200px;
-    display: flex;
+    /*border-style:dotted;*/
+    /*border-color: #000000;*/
+    /*border-radius:15px;*/
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*display: flex;*/
     flex-flow: wrap;
     justify-content: space-around;
     margin-top: 30px;

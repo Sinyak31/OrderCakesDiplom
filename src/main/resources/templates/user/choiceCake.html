@@ -44,10 +44,15 @@
                 <h3 th:text="${cakes.getNameCake()}"></h3>
                 <h3 th:text="${cakes.getDescriptionCake()}"></h3>
                 <h3 th:text="${'Цена за 1 кг: '+cakes.getCostOneKg()}"></h3>
-                    <a th:href="@{/order_details/{id}(id=${cakes.getId()})}">
-                        <button>Заказать</button>
-                    </a>
-                </p>
+<!--                    <a th:href="@{/order_details/{id}(id=${cakes.getId()})}">-->
+<!--                        <button>Заказать</button>-->
+<!--                    </a>-->
+
+                <a th:href="@{/order_details/{id}(id=${cakes.getId()})}" class="btn btn-bubble">Заказать</a>
+
+
+
+
 <!--                <div id="zatemnenie">-->
 <!--                    <div id="okno">-->
 <!--                        <form action="http://vk.com" method="post">-->

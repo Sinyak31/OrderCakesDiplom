@@ -11,12 +11,7 @@
     <link rel="icon" href="images/лого.png" type="image/x-icon">
 </head>
 <body>
-<script>
-    (function(w,d,u){
-        var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-        var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-    })(window,document,'https://cdn-ru.bitrix24.ru/b28652392/crm/site_button/loader_2_kquw16.js');
-</script>
+
 <div class="main">
     <a class="logo" href="/"><img th:src="@{/images/лого.png}" Width="100" Height="100"/></a>
     <a class="title" id="title" href="/">Сладости для радости</a>
@@ -24,7 +19,7 @@
         <a class="title"  id="subtitle"  href="/ch">Выбрать торт</a>
     </div>
     <div class="menu">
-        <a class="text"  id="subtitle" href="/bu">Создать торт</a>
+        <a class="text"  id="subtitle" href="/builder">Создать торт</a>
     </div>
     <a class="vk" href="https://vk.com/sladosti_dlya_radosti73" target="_blank"><img th:src="@{/images/вк.png}" width=100px height=90px/></a>
     <div class="vhod">
@@ -39,21 +34,17 @@
 <div class="mi">
     <div class="card">
         <div class="top-card">
-            <img th:src="@{/images/праздник.png}"  Width="280" Height="150"/>
+            <img th:src="@{/images/праздник.png}" Width="280" Height="150"/>
         </div>
         <div class="bottom-card">
             <h2> На любой праздник</h2>
-
-
-
-
             <p> Свадьба, день рождение, новый год... Любой день станет незабываемым с нашими сладостями </p>
         </div>
     </div>
 
     <div class="card">
         <div class="top-card">
-            <img th:src="@{/images/формат.png}"  Width="280" Height="150"/>
+            <img th:src="@{/images/формат.png}" Width="280" Height="150"/>
         </div>
         <div class="bottom-card">
             <h2>В любом формате</h2>
@@ -63,7 +54,7 @@
 
     <div class="card">
         <div class="top-card">
-            <img th:src="@{/images/упаковка.png}"  Width="280" Height="150"/>
+            <img th:src="@{/images/упаковка.png}" Width="280" Height="150"/>
         </div>
         <div class="bottom-card">
             <h2>Красивая упаковка</h2>
@@ -75,27 +66,27 @@
 <div class="mi">
     <div class="card">
         <div class="top-card">
-            <img th:src="@{/images/вкусные.png}"  Width="280" Height="150"/>
+            <img th:src="@{/images/вкусные.png}" Width="280" Height="210"/>
         </div>
         <div class="bottom-card">
             <h3>Вкусные</h3>
-            <p> Наши торты сочные и вкусные, потому что мы делаем их с душой </p>
+            <p>Наши торты сочные и вкусные, потому что мы делаем их с душой </p>
         </div>
     </div>
 
     <div class="card">
         <div class="top-card">
-            <img th:src="@{/images/натур.png}" Width="280" Height="150"/>
+            <img th:src="@{/images/натур.png}" Width="280" Height="210"/>
         </div>
         <div class="bottom-card">
             <h3>Натуральные</h3>
-            <p> Мы не используем искусственные жиры, добавки, готовые смеси и усилители вкуса </p>
+            <p>Мы не используем искусственные жиры, добавки, готовые смеси и усилители вкуса</p>
         </div>
     </div>
 
     <div class="card">
         <div class="top-card">
-            <img th:src="@{/images/свежие.png}" Width="280" Height="150"/>
+            <img th:src="@{/images/свежие.png}" Width="280" Height="220"/>
         </div>
         <div class="bottom-card">
             <h3>Свежие</h3>
@@ -103,7 +94,6 @@
         </div>
     </div>
 </div>
-
 <h1> Мы предлагаем: </h1>
 <a class="predl" id="predl" href="/ch">*Выбрать один из вариантов торта</a>
 <br>
@@ -139,5 +129,11 @@
         <td th:text="${lis.getReviewsText()}">Отзыв </td>
     </tr>
 </table>
+<script>
+    (function(w,d,u){
+        var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+        var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+    })(window,document,'https://cdn-ru.bitrix24.ru/b28652392/crm/site_button/loader_2_kquw16.js');
+</script>
 </body>
 <html>
