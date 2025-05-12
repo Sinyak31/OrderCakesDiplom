@@ -1,7 +1,21 @@
 package com.sinyak.ordercake.entity;
 
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "cake")
@@ -13,16 +27,19 @@ import lombok.*;
 public class Cake {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private int id;
-    @Column(name = "name_cake")
+
     private String nameCake;
-    @Column(name = "description_cake")
+
     private String descriptionCake;
-    @Column(name = "cost_one_kg")
+
     private int costOneKg;
+
     @Lob
     private String image;
+
+    private OffsetDateTime crateAt;
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "categories_id", referencedColumnName = "id")
     private Categories categories;

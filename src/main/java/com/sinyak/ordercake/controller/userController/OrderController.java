@@ -1,7 +1,9 @@
 package com.sinyak.ordercake.controller.userController;
 
 import com.sinyak.ordercake.configSecurity.MyUserDetails;
-import com.sinyak.ordercake.entity.*;
+import com.sinyak.ordercake.entity.Cake;
+import com.sinyak.ordercake.entity.OrderForm;
+import com.sinyak.ordercake.entity.Reviews;
 import com.sinyak.ordercake.service.CakeService;
 import com.sinyak.ordercake.service.OrderService;
 import com.sinyak.ordercake.service.ReviewService;
@@ -12,7 +14,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Optional;
@@ -66,7 +72,6 @@ public class OrderController {
      */
     @PostMapping("/saveReviews")
     public String saveEmployee(@ModelAttribute("reviews") Reviews reviews) {
-        System.out.println(reviews);
         revService.save(reviews);
         return "redirect:/index";
     }

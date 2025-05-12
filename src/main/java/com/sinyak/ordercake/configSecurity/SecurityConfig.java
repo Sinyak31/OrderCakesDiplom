@@ -35,7 +35,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth.requestMatchers("/**").permitAll()
-                        .requestMatchers("/admin**").hasRole("ADMIN").anyRequest().authenticated())
+                        .requestMatchers("/admin**").hasRole("ADMIN")
+                        .anyRequest().authenticated())
                 .formLogin(form -> form
                         .loginPage("/auth")
                         .defaultSuccessUrl("/index")

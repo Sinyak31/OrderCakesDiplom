@@ -5,8 +5,6 @@ import com.sinyak.ordercake.configSecurity.MyUserDetails;
 import com.sinyak.ordercake.model.User;
 import com.sinyak.ordercake.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

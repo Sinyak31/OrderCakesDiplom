@@ -1,24 +1,21 @@
 package com.sinyak.ordercake.service;
 
-import com.sinyak.ordercake.entity.Cake;
-import com.sinyak.ordercake.entity.Categories;
 import com.sinyak.ordercake.model.User;
 import com.sinyak.ordercake.repositories.UserRepository;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UserService {
 
-    private UserRepository userRepository;
-    private PasswordEncoder encoder;
+    private final UserRepository userRepository;
+    private final PasswordEncoder encoder;
 
 
     public void addUser(User user){
@@ -48,4 +45,5 @@ public class UserService {
         user.setRoles(userUpdate.getRoles());
         userRepository.save(user);
     }
+
 }
